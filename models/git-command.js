@@ -28,13 +28,6 @@ class GitCommand {
                     this.staging.push(modified_files[file_list[row]]);
                     delete this.working_directory.new_changes[file_list[row]]; 
                 }
-            }
-        }
-        else{
-            return `Failed to add ${path_file}! File is not modified or missing.`;
-        }
-        return "Successfully added as index file/s.";
-    }
 
     //Command: git commit -m "<message>"
     commit(message){
